@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Cadastro de Jogador</h1>
+	<form action="/efetuJogCa" method="post">
+	Nome do jogador : <input type="text" name="Nome">
+	<br>
+	Time : <SELECT name="time">
+	<option th:each="tim : ${list_time}"
+			th:value="${tim.id}"
+			th:text="${tim.nome}">
+	</SELECT> <br>
+	Salario : <input type="number" name="salario">
+	<br>
+	Data de nascimento : <input type="date" name="datanas">
+	<br>
+	<button type="submit"> Cadastrar Jogador</button>
+	</form>
+
+</body>
+</html>

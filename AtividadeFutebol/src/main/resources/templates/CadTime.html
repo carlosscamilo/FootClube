@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Cadastro de Time</h1>
+	<form action="/efetTimeca" method="post">
+	Nome de time : <input type="text" name="Nome">
+   <br>
+   Estado:	<SELECT name="uf">
+	<option th:each="estado : ${enum_uf}"
+			th:value="${estado}"
+			th:text="${estado}">
+	</SELECT>
+	<br>
+	Tecnico : <SELECT name="tecnico">
+	<option th:each="tec : ${lista_tecn}"
+			th:value="${tec.id}"
+			th:text="${tec.nome}">
+	</SELECT> <br>
+	<button type="submit"> Cadastrar Time</button>
+	</form>
+</body>
+</html>

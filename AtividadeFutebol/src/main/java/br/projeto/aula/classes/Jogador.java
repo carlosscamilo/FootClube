@@ -27,6 +27,28 @@ public class Jogador {
 	@OneToOne
 	private Time time;
 	
+	@OneToOne
+	private Usuario usuario;
+		
+	@OneToOne
+	private DadosCorporais dadosCorporais;
+	
+	@OneToOne
+	private Desempenho desempenho;
+	
+	public DadosCorporais getDadosCorporais() {
+		return dadosCorporais;
+	}
+	public void setDadosCorporais(DadosCorporais dadosCorporais) {
+		this.dadosCorporais = dadosCorporais;
+	}
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
+
 	public Integer getId() {
 		return id;
 	}

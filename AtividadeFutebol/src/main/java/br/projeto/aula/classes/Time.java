@@ -23,6 +23,15 @@ public class Time {
 	@OneToOne
 	private Tecnico tecnico;
 	
+	@OneToOne
+	private Usuario usuario;
+	
+	public Usuario getUsuario() {
+		return usuario;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
+	}
 	public Integer getId() {
 		return id;
 	}

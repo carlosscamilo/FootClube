@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cadastrar Desempenho</title>
+</head>
+<body>
+<h1>Desempenho</h1>
+<form action="/EfetDes" method="post">
+
+<br> Jogador <SELECT name="jogador">
+			<option th:each="jog : ${lista_jog}"
+					th:value="${jog.id}"
+					th:text="${jog.nome}">
+	</SELECT>
+<br> Chutes : <input type="number" name="chutes">
+<br> Gols : <input type="number" name="gols">
+<br> Passes certos : <input type="number" name="passesCertos">
+<br> Passes errados : <input type="number" name="passesErrados">
+<br> Desarmes : <input type="number" name="desarmes">
+<br> Faltas Cometidas : <input type="number" name="faltasCometidas">
+<br> Faltas Feitas : <input type="number" name="faltasFeitas">
+<br>
+<button type="submit">Cadastrar Desempenho</button>
+</form>
+</body>
+</html>

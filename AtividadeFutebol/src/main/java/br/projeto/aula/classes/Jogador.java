@@ -14,7 +14,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 public class Jogador {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
 	private String nome;

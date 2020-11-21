@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Desempenho {
@@ -11,12 +12,19 @@ public class Desempenho {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	private Integer chutes;
+	
 	private Integer gols;
+	
 	private Integer passesCertos;
+	
 	private Integer passesErrados;
+	
 	private Integer desarmes;
+	
 	private Integer faltasCometidas;
+	
 	private Integer faltasFeitas;
 	
 	public Integer getId() {

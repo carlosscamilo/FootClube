@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cadastrar Dados</title>
+</head>
+<body>
+<h1>Dados Corporais</h1>
+<form action="/cadDados" method="post">
+<br>Jogador : <SELECT name="jogador">
+				<option th:each="joj : ${lista_jooj}"
+					    th:value="${joj.id}"
+						th:text="${joj.nome}">
+			  </SELECT>
+<br> Altura : <input type="number" name="altura">
+<br> Peso : <input type="number" name="peso">
+<br> IMC : <input type="number" name="imc">
+<br>
+<button type="submit">Cadastrar</button>
+</form>
+</body>
+</html>

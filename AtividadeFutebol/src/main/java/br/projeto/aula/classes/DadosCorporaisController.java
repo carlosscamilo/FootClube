@@ -27,6 +27,6 @@ public class DadosCorporaisController {
 	public String Efdads(DadosCorporais dads){
 		this.dadsdao.save(dads);
 		System.out.println(dads);
-		return "index";
+		return "pag";
 	}
 }

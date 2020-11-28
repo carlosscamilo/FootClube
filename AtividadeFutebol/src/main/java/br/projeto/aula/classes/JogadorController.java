@@ -28,7 +28,7 @@ public class JogadorController {
 	public String cadaJog(Jogador jogado){
 		this.jogadordao.save(jogado);
 		System.out.println(jogado);
-		return "index";
+		return "pag";
 		
 	}
 	

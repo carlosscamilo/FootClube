@@ -35,6 +35,6 @@ public class TimeController {
 	public String cadastrTime(Time time){
 		this.timedao.save(time);
 		System.out.println(time);
-		return "index";
+		return "pag";
 	}
 }

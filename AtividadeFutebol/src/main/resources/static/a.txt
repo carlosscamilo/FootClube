@@ -1,0 +1,10 @@
+Login
+Register
+Cadastro de time
+Cadastro de tecnico
+Cadastro de jogador
+Visualizacao de graficos
+
+
+
+Graficos para Times, Tecnicos, Jogadores

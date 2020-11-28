@@ -20,6 +20,6 @@ public class TecnicoController {
 	public String EfetuaCdatec(Tecnico tecnic){
 		this.tecnicodao.save(tecnic);
 		System.out.println(tecnic);
-		return "index";
+		return "pag";
 	}
 }

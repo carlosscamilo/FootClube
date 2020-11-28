@@ -27,6 +27,6 @@ public class DesempenhoController {
 	public String efdes(Desempenho des){
 		this.desempenhodao.save(des);
 		System.out.println(des);
-		return "index";
+		return "pag";
 	}
 }

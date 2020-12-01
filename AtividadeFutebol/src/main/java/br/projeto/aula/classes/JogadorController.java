@@ -16,6 +16,12 @@ public class JogadorController {
     @Autowired
     private TimeDAO timedao;
 	
+    @Autowired
+    private DadosCorporaisDAO dadosdao;
+    
+    @Autowired
+    private DesempenhoDAO desdao;
+    
 	@GetMapping("/cadastra_jogador")
 	public String CadJog(Model model){
 		

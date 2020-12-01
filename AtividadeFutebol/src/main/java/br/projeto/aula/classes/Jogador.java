@@ -2,10 +2,12 @@ package br.projeto.aula.classes;
 
 import java.time.LocalDate;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
 import org.springframework.format.annotation.DateTimeFormat;
@@ -29,13 +31,21 @@ public class Jogador {
 	
 	@OneToOne
 	private Usuario usuario;
-		
-	@OneToOne
+	
+	@OneToOne(cascade = CascadeType.ALL)	
+	@JoinColumn(name = "dados_id")
 	private DadosCorporais dadosCorporais;
 	
-	@OneToOne
+	@OneToOne(cascade = CascadeType.ALL)	
+	@JoinColumn(name = "desempenho_id")
 	private Desempenho desempenho;
 	
+	public Desempenho getDesempenho() {
+		return desempenho;
+	}
+	public void setDesempenho(Desempenho desempenho) {
+		this.desempenho = desempenho;
+	}
 	public DadosCorporais getDadosCorporais() {
 		return dadosCorporais;
 	}

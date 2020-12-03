@@ -12,6 +12,8 @@ import javax.persistence.OneToOne;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import br.projeto.aula.acesso.Usuario;
+
 @Entity
 public class Jogador {
 

@@ -8,6 +8,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+import br.projeto.aula.acesso.Usuario;
+
 @Entity
 public class Time {
 	

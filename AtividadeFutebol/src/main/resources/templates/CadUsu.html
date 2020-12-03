@@ -36,30 +36,30 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Criar uma conta!</h1>
                             </div>
-                            <form class="user">
+                            <form class="user" method="post" action="/efetuarCadUs">
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="Nome">
+                                            placeholder="Nome" name="nome" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Endereco de email">
+                                        placeholder="Endereco de email" name="email" required>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Senha">
+                                            id="exampleInputPassword" placeholder="Senha" name="senha" required>
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Repetir senha">
+                                            id="exampleRepeatPassword" placeholder="Repetir senha" required>
                                     </div>
                                 </div>
-                                <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                <button class="btn btn-primary btn-user btn-block">
                                     Registrar Conta
-                                </a>
+                                </button>
                             </form>
                             <hr>
                             <div class="text-center">

@@ -3,6 +3,9 @@ package br.projeto.aula.acesso;
 
 import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -15,8 +18,19 @@ public class UsuarioController {
 	@Autowired
 	private UsuarioDAO usuariodao;
 	
+	@Bean
+	public PasswordEncoder passwordeEncoder() {
+	    return new BCryptPasswordEncoder();
+	}
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
+	
 	@PostMapping("/efetuarCadUs")
 	public String efetuarCadUsuario(Usuario usuario) {
+		
+		usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
+		
 		this.usuariodao.save(usuario);
 		System.out.println(usuario);
 		return "redirect:/";
@@ -37,7 +51,7 @@ public class UsuarioController {
 		
 		Usuario usuarioConsultado = this.usuariodao.findByEmail(usuario.getEmail());
 		
-		if (usuario != null && usuario.getSenha().equals(usuarioConsultado.getSenha())) {
+		if (usuario != null && this.passwordEncoder.matches(usuario.getSenha(), usuarioConsultado.getSenha())) {
 			session.setAttribute("UsuarioLogado", usuario);
 			return "redirect:/paginas";
 		} else {

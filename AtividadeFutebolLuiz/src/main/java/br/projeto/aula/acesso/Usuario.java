@@ -16,7 +16,7 @@ public class Usuario {
 	private String nome;
 	@Column(unique = true)
 	private String email;
-	@Column(length = 50)
+	@Column(length = 1024)
 	private String senha;
 	public Integer getId() {
 		return id;
